@@ -1,0 +1,46 @@
+* {
+    font-family: arial;
+    font-size: 15pt;
+    background-color: lightgoldenrodyellow;
+}
+
+.container {
+    position: relative;
+    height: 220vh;
+    padding-top: 20px;
+}
+
+.list-header {
+    /*position:relative is for not sticky-supporting browsers, a fallback*/
+    position: relative;
+    height: 40px;
+    width: auto;
+    color: lightgoldenrodyellow;
+    font-size: 20pt;
+    background-color: orange;
+    padding-left: 14px;
+    padding-top: 12px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@supports (position: sticky) {
+    .list-header {
+        /*not supported by all browsers, this helps*/
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
+        /*top is important!!!*/
+        top: 0px;
+    }
+}
+
+.list-content {
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
